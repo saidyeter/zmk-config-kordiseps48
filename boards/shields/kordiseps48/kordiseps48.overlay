@@ -3,11 +3,11 @@
 
 / {
 	chosen {
-		zmk,kscan = &kscan_0;
+		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
 	};
 
-    kscan0: kscan_0{
+    kscan0: kscan{
 		compatible = "zmk,kscan-gpio-matrix";
 		diode-direction = "row2col";
         wakeup-source;
