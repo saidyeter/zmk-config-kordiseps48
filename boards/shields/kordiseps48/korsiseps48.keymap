@@ -13,7 +13,7 @@
 #define E4   8
 
 / {
-	keymap {
+	keymap0: keymap {
 		compatible = "zmk,keymap";
 
 		default_layer {
