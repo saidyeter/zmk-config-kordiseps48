@@ -1,0 +1,110 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define DEFAULT 0
+#define BT   1
+#define FN   2
+#define SYM  3
+#define E1   4
+#define ARR  5
+#define E2   6
+#define E3   7
+#define E4   8
+
+/ {
+	keymap {
+		compatible = "zmk,keymap"; 
+
+		default_layer {
+			bindings = <
+                &kp N1      &kp N2     &kp N3      &kp N4        &kp N5          &kp N6      &kp N7           &kp N8      &kp N9     &kp N0 
+                &kp  Q      &kp  W     &kp  E      &kp  R        &kp  T          &kp  Y      &kp  U           &kp  I      &kp  O     &kp  P 
+                &mt LGUI A  &mt LALT S &mt LCTRL D &mt LSHFT F   &kp  G          &kp  H      &mt RSHFT J      &mt RCTRL K &mt RALT L &mt RGUI SEMICOLON 
+                &kp  Z      &kp  X     &kp  C      &kp  V        &kp  B          &kp  N      &kp  M           &kp  COMMA  &kp  DOT   &kp  SLASH  
+                            &mo  BT    &lt FN ESC  &lt SYM SPACE &lt E1 TAB      &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL  &mo E4  
+            >;
+        };
+
+        bt_layer {
+			bindings = <
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &bt BT_NXT  &bt BT_PRV       &none        &none        &bt BT_CLR 
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &bootloader
+                             &none        &lt FN ESC   &lt SYM SPACE &lt E1 TAB       &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL  &mo E4  
+            >;
+        };
+
+        fn_layer{
+			bindings = <
+                &kp F1       &kp F2       &kp F3       &kp F4       &kp F5            &kp F6      &kp F7           &kp F8       &kp F9      &kp F10
+                &kp F11      &kp F12      &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &bootloader
+                             &mo  BT      &none        &lt SYM SPACE &lt E1 TAB       &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL  &mo E4  
+            >;
+        };
+
+
+        symbol_layer{
+			bindings = <
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &bootloader
+                             &mo  BT      &lt FN ESC   &none        &lt E1 TAB        &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo E4  
+            >;
+        };
+
+        empty1_layer{
+			bindings = <
+                &none        &none        &none        &none        &none             &none       &none            &kp UP       &none        &none
+                &none        &none        &none        &none        &none             &none       &kp LEFT         &kp DOWN     &kp RIGHT    &none        
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &bootloader
+                             &mo  BT      &lt FN ESC   &lt SYM SPACE &none            &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo E4  
+            >;
+        };
+
+        arr_layer{
+			bindings = <
+                &none        &none        &none        &none        &none             &none       &none            &kp UP       &none        &none
+                &none        &none        &none        &none        &none             &none       &kp LEFT         &kp DOWN     &kp RIGHT    &none   
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &bootloader
+                             &mo  BT      &lt FN ESC   &lt SYM SPACE &lt E1 TAB       &none       &lt E2 BACKSPACE &lt E3 DEL   &mo E4  
+            >;
+        };
+
+        empty2_layer{
+			bindings = <
+                &none        &none        &none        &none        &none             &none       &none            &kp UP       &none        &none
+                &none        &none        &none        &none        &none             &none       &kp LEFT         &kp DOWN     &kp RIGHT    &none        
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &bootloader
+                             &mo  BT      &lt FN ESC   &lt SYM SPACE &lt E1 TAB       &lt ARR RET &none            &lt E3 DEL   &mo E4  
+            >;
+        };
+
+        empty3_layer{
+			bindings = <
+                &none        &none        &none        &none        &none             &none       &none            &kp UP       &none        &none
+                &none        &none        &none        &none        &none             &none       &kp LEFT         &kp DOWN     &kp RIGHT    &none        
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &bootloader
+                             &mo  BT      &lt FN ESC   &lt SYM SPACE &lt E1 TAB       &lt ARR RET &lt E2 BACKSPACE &none        &mo E4  
+            >;
+        };
+
+        empty4_layer{
+			bindings = <
+                &none        &none        &none        &none        &none             &none       &none            &kp UP       &none        &none
+                &none        &none        &none        &none        &none             &none       &kp LEFT         &kp DOWN     &kp RIGHT    &none        
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &bootloader
+                             &mo  BT      &lt FN ESC   &lt SYM SPACE &lt E1 TAB       &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &none 
+            >;
+        };
+    };
+};
