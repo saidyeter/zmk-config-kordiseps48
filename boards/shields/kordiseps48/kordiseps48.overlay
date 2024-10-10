@@ -9,26 +9,23 @@
     default_kscan: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
 		diode-direction = "row2col";
-        wakeup-source;
 
-		row-gpios = 
-            <&pro_micro_d 7 GPIO_ACTIVE_HIGH>,
-            <&pro_micro_d 16 GPIO_ACTIVE_HIGH>,
-            <&pro_micro_d 17 GPIO_ACTIVE_HIGH>,
-            <&pro_micro_d 9 GPIO_ACTIVE_HIGH>,
-			<&pro_micro_d 8 GPIO_ACTIVE_HIGH>;
+		row-gpios = <&pro_micro_d 7 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro_d 16 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro_d 17 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro_d 9 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro_d 8 GPIO_ACTIVE_HIGH>;
 
-        col-gpios =
-            <&pro_micro_d 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro_d 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro_d 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro_d 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro_d 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        col-gpios = <&pro_micro_d 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro_d 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro_d 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro_d 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro_d 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 
 	default_transform: matrix_transform {
