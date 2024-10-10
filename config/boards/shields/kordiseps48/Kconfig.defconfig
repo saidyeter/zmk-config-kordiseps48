@@ -1,0 +1,6 @@
+if SHIELD_KORDISEPS48
+
+config ZMK_KEYBOARD_NAME
+	default "Kordiseps48"
+
+endif 
