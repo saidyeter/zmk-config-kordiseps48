@@ -2,33 +2,34 @@
 
 / {
 	chosen {
-		zmk,kscan = &default_kscan;
+		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
 	};
 
-    default_kscan: kscan {
+    kscan0: kscan0 {
 		compatible = "zmk,kscan-gpio-matrix";
 		diode-direction = "row2col";
+        wakeup-source;
 
-		row-gpios = <&pro_micro_d 7 GPIO_ACTIVE_HIGH>,
-                    <&pro_micro_d 16 GPIO_ACTIVE_HIGH>,
-                    <&pro_micro_d 17 GPIO_ACTIVE_HIGH>,
-                    <&pro_micro_d 9 GPIO_ACTIVE_HIGH>,
-                    <&pro_micro_d 8 GPIO_ACTIVE_HIGH>;
+		row-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro 16 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro 17 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro 9 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro 8 GPIO_ACTIVE_HIGH>;
 
-        col-gpios = <&pro_micro_d 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro_d 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro_d 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro_d 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro_d 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        col-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 
-	default_transform: matrix_transform {
+	default_transform: keymap_transform0 {
 		compatible = "zmk,matrix-transform";
 		rows = <5>;
 		columns = <10>;
