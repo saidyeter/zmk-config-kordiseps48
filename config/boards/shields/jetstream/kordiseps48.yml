@@ -2,7 +2,8 @@ file_format: "1"
 id: kordiseps48
 name: kordiseps48
 type: shield
-url: https://github.com/saidyeter/zmk-config-kordiseps48
-requires: [pro_micro]
+url: https://github.com/saidyeter/kordiseps48
+requires:
+  - pro_micro
 features:
   - keys
