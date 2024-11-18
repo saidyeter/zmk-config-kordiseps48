@@ -110,7 +110,7 @@
 
     empty4_layer{
 			bindings = <
-                myname  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans
+                &myname  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans
                 &trans  &trans  &trans      &trans        &trans        &trans      &trans           &kp UP       &trans    &trans
                 &trans  &trans  &trans      &trans        &trans        &trans      &kp LEFT         &kp DOWN     &kp RIGHT &trans        
                 &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &bootloader
