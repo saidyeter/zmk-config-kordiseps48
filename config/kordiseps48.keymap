@@ -14,7 +14,102 @@
 
 / {
 
-  macros {
+	keymap {
+		compatible = "zmk,keymap"; 
+
+		default_layer {
+			bindings = <
+                &kp N1      &kp N2     &kp N3      &kp N4        &kp N5          &kp N6      &kp N7           &kp N8      &kp N9     &kp N0 
+                &kp  Q      &kp  W     &kp  E      &kp  R        &kp  T          &kp  Y      &kp  U           &kp  I      &kp  O     &kp  P 
+                &mt LGUI A  &mt LALT S &mt LCTRL D &mt LSHFT F   &kp  G          &kp  H      &mt RSHFT J      &mt RCTRL K &mt RALT L &mt RGUI SEMICOLON 
+                &kp  Z      &kp  X     &kp  C      &kp  V        &kp  B          &kp  N      &kp  M           &kp  COMMA  &kp  DOT   &kp  SLASH  
+                            &mo  BT    &lt FN ESC  &lt SYM SPACE &lt E1 TAB      &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL  &mo SECRETS  
+            >;
+        };
+
+    bt_layer {
+			bindings = <
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &bt BT_NXT  &bt BT_PRV       &none        &none        &bt BT_CLR 
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &bootloader
+                             &mo  BT      &lt FN ESC   &lt SYM SPACE &lt E1 TAB       &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
+            >;
+        };
+
+    fn_layer{
+			bindings = <
+                &kp F1       &kp F2       &kp F3       &kp F4       &kp F5            &kp F6      &kp F7           &kp F8       &kp F9      &kp F10
+                &kp F11      &kp F12      &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
+                &none        &none        &none        &none        &none             &none       &none            &none        &none        &bootloader
+                             &mo  BT      &lt FN ESC   &lt SYM SPACE &lt E1 TAB       &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
+            >;
+        };
+
+
+    symbol_layer{
+			bindings = <
+                &kp GRAVE  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &kp MINUS &kp EQUAL 
+                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans 
+                &trans  &trans  &trans      &trans        &trans        &kp LBRC    &kp RBRC         &trans       &trans    &trans        
+                &trans  &trans  &trans      &trans        &trans        &kp LBKT    &kp RBKT         &kp SQT      &trans    &kp NUBS
+                        &mo  BT &lt FN ESC  &lt SYM SPACE &lt E1 TAB    &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
+            >;
+        };
+
+    empty1_layer{
+			bindings = <
+                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &kp K_APP &kp K_CMENU
+                &trans  &trans  &trans      &trans        &trans        &kp PG_DN   &kp HOME         &kp UP       &kp END   &kp PG_UP
+                &trans  &trans  &trans      &trans        &trans        &trans      &kp LEFT         &kp DOWN     &kp RIGHT &trans        
+                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans
+                        &mo  BT &lt FN ESC  &lt SYM SPACE &lt E1 TAB    &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
+            >;
+        };
+
+    arr_layer{
+			bindings = <
+                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &kp K_APP &kp K_CMENU
+                &trans  &trans  &trans      &trans        &trans        &kp PG_DN   &kp HOME         &kp UP       &kp END   &kp PG_UP
+                &trans  &trans  &trans      &trans        &trans        &trans      &kp LEFT         &kp DOWN     &kp RIGHT &trans        
+                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans
+                        &mo  BT &lt FN ESC  &lt SYM SPACE &lt E1 TAB    &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
+            >;
+        };
+
+    empty2_layer{
+			bindings = <
+                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &kp K_APP &kp K_CMENU
+                &trans  &trans  &trans      &trans        &trans        &kp PG_DN   &kp HOME         &kp UP       &kp END   &kp PG_UP
+                &trans  &trans  &trans      &trans        &trans        &trans      &kp LEFT         &kp DOWN     &kp RIGHT &trans        
+                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans
+                        &mo  BT &lt FN ESC  &lt SYM SPACE &lt E1 TAB    &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
+            >;
+        };
+
+    empty3_layer{
+			bindings = <
+                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &kp K_APP &kp K_CMENU
+                &trans  &trans  &trans      &trans        &trans        &kp PG_DN   &kp HOME         &kp UP       &kp END   &kp PG_UP
+                &trans  &trans  &trans      &trans        &trans        &trans      &kp LEFT         &kp DOWN     &kp RIGHT &trans        
+                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans
+                        &mo  BT &lt FN ESC  &lt SYM SPACE &lt E1 TAB    &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
+            >;
+        };
+
+    secrets_layer{
+			bindings = <
+                &vpn    &obssmail  &gmail   &trans        &trans        &trans      &trans           &trans       &thisisunsafe    &quickpass
+                &p1     &p2     &p3         &p4           &p5           &p6         &p7              &p8          &p9       &p10
+                &p11    &p12    &p13        &p14          &p15          &p16        &p17             &p18         &p19      &p20        
+                &p21    &p22    &p23        &p24          &p25          &p26        &p27             &p28         &p29      &p30
+                        &mo  BT &lt FN ESC  &lt SYM SPACE &lt E1 TAB    &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
+            >;
+        };
+    };
+
+     macros {
       myname: myname {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
@@ -23,12 +118,52 @@
               = <&macro_tap &kp S &kp A &kp I &kp D &kp DOT &kp Y &kp E &kp T &kp E &kp R>;
       };
 
+      obssmail: obssmail {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+          // said.yeter@obss.tech
+              = <&macro_tap &kp S &kp A &kp I &kp D &kp DOT &kp Y &kp E &kp T &kp E &kp R &kp AT &kp O &kp B &kp S &kp S &kp DOT &kp T &kp E &kp C &kp H >;
+      };
+
+      gmail: gmail {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+          // kordiseps@gmail.com
+              = <&macro_tap &kp K &kp O &kp R &kp D &kp I &kp S &kp E &kp P &kp S &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M >;
+      };
+
       quickpass: quickpass {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings
           // temp1024
               = <&macro_tap &kp T &kp E &kp M &kp P &kp N1 &kp N0 &kp N2 &kp N4 >;
+      };
+
+      thisisunsafe: thisisunsafe {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+          // thisisunsafe
+              = <&macro_tap &kp T &kp H &kp I &kp S &kp I &kp S &kp U &kp N &kp S &kp A &kp F &kp E >;
+      };
+
+      vpn: vpn {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+                = <&macro_tap &kp K  &kp J  &kp F>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp T>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp R  &kp EXCL &kp EXCL &kp MINUS &kp N8 &kp N4  &kp J  &kp F &kp N8>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp H &kp P>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp N1 &kp N8>
+                ;
       };
 
       p1: p1 {
@@ -593,98 +728,4 @@
 
   };
 
-	keymap {
-		compatible = "zmk,keymap"; 
-
-		default_layer {
-			bindings = <
-                &kp N1      &kp N2     &kp N3      &kp N4        &kp N5          &kp N6      &kp N7           &kp N8      &kp N9     &kp N0 
-                &kp  Q      &kp  W     &kp  E      &kp  R        &kp  T          &kp  Y      &kp  U           &kp  I      &kp  O     &kp  P 
-                &mt LGUI A  &mt LALT S &mt LCTRL D &mt LSHFT F   &kp  G          &kp  H      &mt RSHFT J      &mt RCTRL K &mt RALT L &mt RGUI SEMICOLON 
-                &kp  Z      &kp  X     &kp  C      &kp  V        &kp  B          &kp  N      &kp  M           &kp  COMMA  &kp  DOT   &kp  SLASH  
-                            &mo  BT    &lt FN ESC  &lt SYM SPACE &lt E1 TAB      &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL  &mo SECRETS  
-            >;
-        };
-
-    bt_layer {
-			bindings = <
-                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &bt BT_NXT  &bt BT_PRV       &none        &none        &bt BT_CLR 
-                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
-                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
-                &none        &none        &none        &none        &none             &none       &none            &none        &none        &bootloader
-                             &mo  BT      &lt FN ESC   &lt SYM SPACE &lt E1 TAB       &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
-            >;
-        };
-
-    fn_layer{
-			bindings = <
-                &kp F1       &kp F2       &kp F3       &kp F4       &kp F5            &kp F6      &kp F7           &kp F8       &kp F9      &kp F10
-                &kp F11      &kp F12      &none        &none        &none             &none       &none            &none        &none        &none
-                &none        &none        &none        &none        &none             &none       &none            &none        &none        &none
-                &none        &none        &none        &none        &none             &none       &none            &none        &none        &bootloader
-                             &mo  BT      &lt FN ESC   &lt SYM SPACE &lt E1 TAB       &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
-            >;
-        };
-
-
-    symbol_layer{
-			bindings = <
-                &kp GRAVE  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &kp MINUS &kp EQUAL 
-                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans 
-                &trans  &trans  &trans      &trans        &trans        &kp LBRC    &kp RBRC         &trans       &trans    &trans        
-                &trans  &trans  &trans      &trans        &trans        &kp LBKT    &kp RBKT         &kp SQT      &trans    &kp NUBS
-                        &mo  BT &lt FN ESC  &lt SYM SPACE &lt E1 TAB    &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
-            >;
-        };
-
-    empty1_layer{
-			bindings = <
-                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &kp K_APP &kp K_CMENU
-                &trans  &trans  &trans      &trans        &trans        &kp PG_DN   &kp HOME         &kp UP       &kp END   &kp PG_UP
-                &trans  &trans  &trans      &trans        &trans        &trans      &kp LEFT         &kp DOWN     &kp RIGHT &trans        
-                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans
-                        &mo  BT &lt FN ESC  &lt SYM SPACE &lt E1 TAB    &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
-            >;
-        };
-
-    arr_layer{
-			bindings = <
-                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &kp K_APP &kp K_CMENU
-                &trans  &trans  &trans      &trans        &trans        &kp PG_DN   &kp HOME         &kp UP       &kp END   &kp PG_UP
-                &trans  &trans  &trans      &trans        &trans        &trans      &kp LEFT         &kp DOWN     &kp RIGHT &trans        
-                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans
-                        &mo  BT &lt FN ESC  &lt SYM SPACE &lt E1 TAB    &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
-            >;
-        };
-
-    empty2_layer{
-			bindings = <
-                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &kp K_APP &kp K_CMENU
-                &trans  &trans  &trans      &trans        &trans        &kp PG_DN   &kp HOME         &kp UP       &kp END   &kp PG_UP
-                &trans  &trans  &trans      &trans        &trans        &trans      &kp LEFT         &kp DOWN     &kp RIGHT &trans        
-                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans
-                        &mo  BT &lt FN ESC  &lt SYM SPACE &lt E1 TAB    &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
-            >;
-        };
-
-    empty3_layer{
-			bindings = <
-                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &kp K_APP &kp K_CMENU
-                &trans  &trans  &trans      &trans        &trans        &kp PG_DN   &kp HOME         &kp UP       &kp END   &kp PG_UP
-                &trans  &trans  &trans      &trans        &trans        &trans      &kp LEFT         &kp DOWN     &kp RIGHT &trans        
-                &trans  &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans
-                        &mo  BT &lt FN ESC  &lt SYM SPACE &lt E1 TAB    &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
-            >;
-        };
-
-    secrets_layer{
-			bindings = <
-                &myname &trans  &trans      &trans        &trans        &trans      &trans           &trans       &trans    &trans
-                &p1     &p2     &p3         &p4           &p5           &p6         &p7              &p8          &p9       &p10
-                &p11    &p12    &p13        &p14          &p15          &p16        &p17             &p18         &p19      &p20        
-                &p21    &p22    &p23        &p24          &p25          &p26        &p27             &p28         &p29      &p30
-                        &mo  BT &lt FN ESC  &lt SYM SPACE &lt E1 TAB    &lt ARR RET &lt E2 BACKSPACE &lt E3 DEL   &mo SECRETS  
-            >;
-        };
-    };
 };
