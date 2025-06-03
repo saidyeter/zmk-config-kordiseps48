@@ -5,5 +5,9 @@ type: shield
 url: https://github.com/saidyeter/kordiseps48
 requires:
   - pro_micro
+utputs:
+  - usb
+  - ble
 features:
   - keys
+  - studio

@@ -1,0 +1,79 @@
+#include <physical_layouts.dtsi>
+#include "position_map.dtsi"
+
+
+/ {
+    kordiseps48_full_layout: kordiseps48_full_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "LAYOUT";
+
+        kscan = <&kscan0>;
+        transform = <&matrix_transform0>;
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0   37       0     0     0>
+            , <&key_physical_attrs 100 100  100   12       0     0     0>
+            , <&key_physical_attrs 100 100  200    0       0     0     0>
+            , <&key_physical_attrs 100 100  300   12       0     0     0>
+            , <&key_physical_attrs 100 100  400   25       0     0     0>
+            , <&key_physical_attrs 100 100  800   25       0     0     0>
+            , <&key_physical_attrs 100 100  900   12       0     0     0>
+            , <&key_physical_attrs 100 100 1000    0       0     0     0>
+            , <&key_physical_attrs 100 100 1100   12       0     0     0>
+            , <&key_physical_attrs 100 100 1200   37       0     0     0>
+            , <&key_physical_attrs 100 100    0  138       0     0     0>
+            , <&key_physical_attrs 100 100  100  112       0     0     0>
+            , <&key_physical_attrs 100 100  200  100       0     0     0>
+            , <&key_physical_attrs 100 100  300  112       0     0     0>
+            , <&key_physical_attrs 100 100  400  125       0     0     0>
+            , <&key_physical_attrs 100 100  800  125       0     0     0>
+            , <&key_physical_attrs 100 100  900  112       0     0     0>
+            , <&key_physical_attrs 100 100 1000  100       0     0     0>
+            , <&key_physical_attrs 100 100 1100  112       0     0     0>
+            , <&key_physical_attrs 100 100 1200  138       0     0     0>
+            , <&key_physical_attrs 100 100    0  238       0     0     0>
+            , <&key_physical_attrs 100 100  100  212       0     0     0>
+            , <&key_physical_attrs 100 100  200  200       0     0     0>
+            , <&key_physical_attrs 100 100  300  212       0     0     0>
+            , <&key_physical_attrs 100 100  400  225       0     0     0>
+            , <&key_physical_attrs 100 100  800  225       0     0     0>
+            , <&key_physical_attrs 100 100  900  212       0     0     0>
+            , <&key_physical_attrs 100 100 1000  200       0     0     0>
+            , <&key_physical_attrs 100 100 1100  212       0     0     0>
+            , <&key_physical_attrs 100 100 1200  238       0     0     0>
+            , <&key_physical_attrs 100 100    0  338       0     0     0>
+            , <&key_physical_attrs 100 100  100  312       0     0     0>
+            , <&key_physical_attrs 100 100  200  300       0     0     0>
+            , <&key_physical_attrs 100 100  300  312       0     0     0>
+            , <&key_physical_attrs 100 100  400  325       0     0     0>
+            , <&key_physical_attrs 100 100  800  325       0     0     0>
+            , <&key_physical_attrs 100 100  900  312       0     0     0>
+            , <&key_physical_attrs 100 100 1000  300       0     0     0>
+            , <&key_physical_attrs 100 100 1100  312       0     0     0>
+            , <&key_physical_attrs 100 100 1200  338       0     0     0>
+            , <&key_physical_attrs 100 100  200  501       0     0     0>
+            , <&key_physical_attrs 100 100  300  451       0     0     0>
+            , <&key_physical_attrs 100 100  400  451       0     0     0>
+            , <&key_physical_attrs 100 100  500  501       0     0     0>
+            , <&key_physical_attrs 100 100  700  501       0     0     0>
+            , <&key_physical_attrs 100 100  800  451       0     0     0>
+            , <&key_physical_attrs 100 100  900  451       0     0     0>
+            , <&key_physical_attrs 100 100 1000  501       0     0     0>
+            ;
+    };
+};
+
+
+
+&layouts_kordiseps48_position_map {
+    kordiseps48_full_posmap: full {
+        physical-layout = <&kordiseps48_full_layout>;
+        positions
+            = <   0  1  2  3  4       5  6  7  8   9>
+            , <   10 11 12 13 14      15 16 17 18 19>
+            , <   20 21 22 23 24      25 26 27 28 29>
+            , <   30 31 32 33 34      35 36 37 38 39>
+            , <       40 41 42 43   44 45 46 47 >;
+    };
+};
+
